@@ -1,0 +1,214 @@
+/* assets/css/customer.css */
+/* Stylesheet Khusus Customer — Rental Mobil PT. Wildan Abadi Jaya */
+
+/* ============================================================
+   1. HERO BANNER
+   ============================================================ */
+.customer-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    padding: 5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(26, 35, 126, 0.15);
+}
+
+.customer-hero::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 214, 0, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.customer-hero-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.customer-hero-subtitle {
+    font-size: 1.15rem;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+/* ============================================================
+   2. MOBIL CARDS (GRID LIST)
+   ============================================================ */
+.car-card {
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.car-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(26, 35, 126, 0.08);
+}
+
+.car-card-img-wrapper {
+    position: relative;
+    height: 200px;
+    background: #f4f6f9;
+    overflow: hidden;
+}
+
+.car-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover .car-card-img {
+    transform: scale(1.05);
+}
+
+.car-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-card-body {
+    padding: 1.5rem;
+}
+
+.car-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.car-meta-item {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-right: 1rem;
+}
+
+.car-price-tag {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.car-price-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* ============================================================
+   3. DETAIL & FORM PEMESANAN
+   ============================================================ */
+.detail-car-sidebar {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.detail-img-showcase {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    background: #f4f6f9;
+}
+
+/* ============================================================
+   4. TRANSAKSI & STATUS LIST
+   ============================================================ */
+.order-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border-left: 5px solid var(--color-primary);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+}
+
+.order-card--menunggu_pembayaran { border-left-color: var(--color-warning); }
+.order-card--menunggu_konfirmasi { border-left-color: var(--color-info); }
+.order-card--aktif { border-left-color: var(--color-primary); }
+.order-card--selesai { border-left-color: var(--color-success); }
+.order-card--dibatalkan { border-left-color: var(--color-danger); }
+
+/* ============================================================
+   5. BUTTONS & UI INTERACTIVES
+   ============================================================ */
+.btn-primary-custom {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--color-primary-dark);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-accent-custom {
+    background-color: var(--color-accent);
+    color: var(--color-text-dark);
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-accent-custom:hover {
+    background-color: #ffd000;
+    color: var(--color-text-dark);
+    transform: translateY(-1px);
+}
+
+/* ============================================================
+   6. ANNOUNCEMENT & DYNAMIC ALERTS
+   ============================================================ */
+.rejected-payment-alert {
+    background-color: rgba(211, 47, 47, 0.05);
+    border: 1px solid rgba(211, 47, 47, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--color-danger);
+    font-size: 0.9rem;
+}
